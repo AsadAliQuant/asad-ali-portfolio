@@ -1,0 +1,43 @@
+---
+import { Icon } from "astro-icon/components";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-footer-bg px-6 py-section text-on-dark">
+  <div
+    class="mx-auto flex max-w-[1280px] flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left"
+  >
+    <p class="text-body-sm-medium">Asad Ali — AI Product Engineer & Full Stack Developer</p>
+
+    <div class="flex items-center gap-5">
+      <a
+        href="mailto:asadamyn@gmail.com"
+        aria-label="Email"
+        class="text-dim"
+      >
+        <Icon name="lucide:mail" class="size-5" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/asadaliquant/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        class="text-dim"
+      >
+        <Icon name="simple-icons:linkedin" class="size-5" />
+      </a>
+      <a
+        href="https://github.com/AsadAliQuant"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+        class="text-dim"
+      >
+        <Icon name="simple-icons:github" class="size-5" />
+      </a>
+    </div>
+
+    <p class="text-micro text-dim">© {year} Asad Ali. All rights reserved.</p>
+  </div>
+</footer>

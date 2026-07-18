@@ -1,0 +1,121 @@
+---
+---
+
+<section id="hero" class="relative isolate overflow-hidden px-6 pt-hero pb-section-lg">
+  <!-- Ambient background: dot grid + soft brand glow, both fading out -->
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-0 -z-10 [mask-image:radial-gradient(75%_60%_at_50%_25%,#000_20%,transparent_100%)]"
+    style="background-image: radial-gradient(var(--color-hairline) 1px, transparent 1px); background-size: 28px 28px;"
+  >
+  </div>
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[520px] w-[820px] -translate-x-1/2 rounded-full opacity-[0.16] blur-3xl"
+    style="background: conic-gradient(from 210deg at 50% 50%, var(--color-brand-blue), var(--color-brand-purple), var(--color-brand-magenta), var(--color-brand-coral), var(--color-brand-blue));"
+  >
+  </div>
+
+  <div class="mx-auto flex max-w-[880px] flex-col items-center gap-6 text-center">
+    <div
+      class="hero-rise inline-flex items-center gap-2 rounded-full border border-hairline bg-canvas/70 py-1.5 pr-4 pl-3 shadow-1 backdrop-blur"
+      style="--delay: 0ms"
+    >
+      <span class="relative flex size-2">
+        <span
+          class="ping absolute inline-flex size-full rounded-full bg-success-text opacity-75"
+        ></span>
+        <span class="relative inline-flex size-2 rounded-full bg-success-text"></span>
+      </span>
+      <span class="text-caption-bold text-charcoal">Available for new projects</span>
+    </div>
+
+    <h1
+      class="hero-rise text-balance text-heading-lg text-ink sm:text-display-lg md:text-hero-display"
+      style="--delay: 60ms"
+    >
+      Asad Ali
+    </h1>
+
+    <p class="hero-rise text-subtitle text-slate" style="--delay: 120ms">
+      AI Product Engineer <span class="text-dim">&amp;</span> Full Stack Developer
+    </p>
+
+    <p
+      class="hero-rise max-w-[620px] text-balance text-body-md leading-[1.7] text-steel"
+      style="--delay: 180ms"
+    >
+      6+ years building across freelancing platforms with Python, SQL, Power BI,
+      JavaScript, and React. I build <span class="text-charcoal">LLM-powered course
+      generators</span> and custom AI plugins, and ship Android and iOS apps end to end.
+    </p>
+
+    <div
+      class="hero-rise mt-2 flex flex-wrap items-center justify-center gap-3"
+      style="--delay: 240ms"
+    >
+      <a
+        href="#projects"
+        class="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-[13px] text-button-md text-primary-foreground shadow-2 transition duration-200 hover:-translate-y-0.5 hover:shadow-4 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
+      >
+        View Projects
+        <svg
+          class="size-4 transition-transform duration-200 group-hover:translate-x-0.5"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M3.5 8h9m0 0L9 4.5M12.5 8 9 11.5"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </a>
+      <a
+        href="#contact"
+        class="inline-flex items-center rounded-full border border-hairline bg-canvas px-6 py-[13px] text-button-md text-ink transition duration-200 hover:-translate-y-0.5 hover:border-ink hover:shadow-2 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
+      >
+        Contact
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-rise {
+    animation: hero-rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: var(--delay, 0ms);
+  }
+
+  @keyframes hero-rise {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .ping {
+    animation: ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes ping {
+    75%,
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-rise,
+    .ping {
+      animation: none;
+    }
+  }
+</style>

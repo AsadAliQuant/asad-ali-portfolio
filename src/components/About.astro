@@ -1,0 +1,88 @@
+---
+import { Image } from "astro:assets";
+import profilePicture from "../assets/profile-picture.jpg";
+
+const highlights = [
+  {
+    title: "AI & LLM systems",
+    body: "Custom plugins on top of LLM APIs — AI-powered course generators, RAG pipelines, and agent workflows.",
+  },
+  {
+    title: "Full stack & mobile",
+    body: "React, FastAPI, and SQL on the web; Android and iOS apps shipped end to end.",
+  },
+  {
+    title: "Revenue impact",
+    body: "$45,000 contributed at Softosmith last year through LMS solutions and web application work.",
+  },
+  {
+    title: "Always learning",
+    body: "NASA Tournament Lab Astrobee Challenge global selectee, now deepening computer vision and ML.",
+  },
+];
+---
+
+<section id="about" class="border-t border-hairline-soft bg-surface px-6 py-section-lg">
+  <div class="mx-auto grid max-w-[1040px] gap-12 md:grid-cols-[220px_1fr] md:gap-16">
+    <!-- Portrait column -->
+    <div class="flex flex-col items-center gap-5 md:sticky md:top-24 md:items-start md:self-start">
+      <div class="relative">
+        <div
+          aria-hidden="true"
+          class="absolute -inset-3 rounded-3xl opacity-25 blur-2xl"
+          style="background: linear-gradient(135deg, var(--color-brand-blue), var(--color-brand-purple), var(--color-brand-coral));"
+        >
+        </div>
+        <div
+          class="relative size-32 overflow-hidden rounded-3xl border border-hairline bg-canvas shadow-3 md:size-full md:aspect-square"
+        >
+          <Image
+            src={profilePicture}
+            alt="Asad Ali"
+            width={560}
+            height={560}
+            class="size-full object-cover"
+          />
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center gap-1 md:items-start">
+        <span class="text-body-md-bold text-ink">Asad Ali</span>
+        <span class="text-body-sm text-steel">Rawalpindi, Pakistan</span>
+      </div>
+    </div>
+
+    <!-- Copy column -->
+    <div class="flex flex-col gap-8">
+      <div class="flex flex-col gap-4">
+        <span class="text-caption-bold tracking-[0.14em] text-stone uppercase">About</span>
+        <h2 class="text-heading-md text-ink">
+          I build AI products that ship — not demos.
+        </h2>
+        <p class="text-subtitle leading-[1.6] text-charcoal">
+          AI Product Engineer and Full Stack Developer with over 6 years of
+          experience on freelancing platforms, turning LLM APIs into tools
+          people actually pay for.
+        </p>
+        <p class="text-body-md leading-[1.7] text-steel">
+          I work across the whole stack — from prompt and retrieval design down
+          to the database, and out to the mobile app. Most of my work lives at
+          the intersection of education technology and AI: LMS platforms,
+          course generation, and automation systems that remove manual work for
+          the teams running them.
+        </p>
+      </div>
+
+      <dl class="grid gap-px overflow-hidden rounded-2xl border border-hairline bg-hairline sm:grid-cols-2">
+        {
+          highlights.map((item) => (
+            <div class="flex flex-col gap-2 bg-canvas p-5 transition-colors duration-200 hover:bg-surface-soft">
+              <dt class="text-body-md-bold text-ink">{item.title}</dt>
+              <dd class="text-body-sm leading-[1.6] text-steel">{item.body}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </div>
+</section>

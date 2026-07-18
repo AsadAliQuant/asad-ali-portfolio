@@ -1,0 +1,93 @@
+---
+import { Icon } from "astro-icon/components";
+import { Card, CardContent } from "./ui/card";
+import { Badge } from "./ui/badge";
+
+const experience = [
+  {
+    company: "Softosmith",
+    location: "Pakistan",
+    role: "Full Stack Developer",
+    period: "2021 – 2024",
+    current: false,
+    icon: "lucide:building-2",
+  },
+  {
+    company: "Fiverr.com",
+    location: "Remote",
+    role: "Full Stack Developer | AI Automations | LMS Developer",
+    period: "2020 – Present",
+    current: true,
+    icon: "simple-icons:fiverr",
+  },
+  {
+    company: "Freelancer.com",
+    location: "Remote",
+    role: "LMS Theme/Plugin Developer | Expert Data Analyst | AI/ML Applications",
+    period: "2018 – Present",
+    current: true,
+    icon: "simple-icons:freelancer",
+  },
+];
+---
+
+<section id="experience" class="px-6 py-section-lg">
+  <div class="mx-auto flex max-w-[720px] flex-col gap-10">
+    <h2 class="text-center text-heading-md text-ink">Experience</h2>
+
+    <Card className="border-hairline">
+      <CardContent>
+        <ol class="flex flex-col">
+          {
+            experience.map((job, i) => {
+              const roles = job.role.split(" | ");
+              return (
+                <li class="relative flex gap-4 pb-7 last:pb-0">
+                  {i < experience.length - 1 && (
+                    <span
+                      aria-hidden="true"
+                      class="absolute top-10 left-[19px] h-[calc(100%-2rem)] w-px bg-hairline"
+                    />
+                  )}
+                  <span class="relative z-10 flex size-10 shrink-0 items-center justify-center rounded-full border border-hairline bg-surface text-ink">
+                    <Icon name={job.icon} class="size-4.5" />
+                  </span>
+                  <div class="flex flex-1 flex-col gap-1.5 pt-1">
+                    <div class="flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
+                      <p class="text-body-sm-medium text-ink">
+                        {job.company}
+                        <span class="font-normal text-stone">
+                          {" "}
+                          · {job.location}
+                        </span>
+                      </p>
+                      <Badge
+                        className={
+                          job.current
+                            ? "border-transparent bg-success-bg text-success-text"
+                            : "border-hairline bg-transparent text-stone"
+                        }
+                      >
+                        {job.period}
+                      </Badge>
+                    </div>
+                    <p class="text-body-sm text-steel">{roles[0]}</p>
+                    {roles.length > 1 && (
+                      <div class="mt-1 flex flex-wrap gap-1.5">
+                        {roles.slice(1).map((role) => (
+                          <span class="rounded-full bg-surface px-2.5 py-1 text-caption text-charcoal">
+                            {role}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </li>
+              );
+            })
+          }
+        </ol>
+      </CardContent>
+    </Card>
+  </div>
+</section>

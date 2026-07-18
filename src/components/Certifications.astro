@@ -1,0 +1,330 @@
+---
+import { Icon } from "astro-icon/components";
+
+const certifications = [
+  {
+    name: "AI For Everyone",
+    issuer: "DeepLearning.AI",
+    date: "",
+    url: "https://www.coursera.org/account/accomplishments/records/0GSII0S6JEKJ",
+  },
+  {
+    name: "Vector Databases: from Embeddings to Applications",
+    issuer: "DeepLearning.AI",
+    date: "",
+    url: "https://www.coursera.org/account/accomplishments/records/6QF3JH9RCC7E",
+  },
+  {
+    name: "HTML and CSS in depth",
+    issuer: "Meta",
+    date: "",
+    url: "https://www.coursera.org/account/accomplishments/records/HUPUW9TPMR3T",
+  },
+  {
+    name: "Harnessing the Power of Data with Power BI",
+    issuer: "Microsoft",
+    date: "",
+    url: "https://www.coursera.org/account/accomplishments/records/4P2E6UNC52BN",
+  },
+  {
+    name: "Preparing Data for Analysis with Microsoft Excel",
+    issuer: "Microsoft",
+    date: "",
+    url: "https://www.coursera.org/account/accomplishments/records/5JYKMTX5KGXH",
+  },
+  {
+    name: "Foundations of User Experience (UX) Design",
+    issuer: "Google",
+    date: "",
+    url: "https://www.coursera.org/account/accomplishments/records/47KC6CEK62BH",
+  },
+  {
+    name: "Start the UX Design Process: Empathize, Define, and Ideate",
+    issuer: "Google",
+    date: "",
+    url: "https://www.coursera.org/account/accomplishments/records/AK5QZB6A2WHW",
+  },
+  {
+    name: "Introduction to Front-End Development",
+    issuer: "Meta",
+    date: "",
+    url: "https://www.coursera.org/account/accomplishments/records/G7EJY3PZS4KT",
+  },
+  {
+    name: "Programming for Everybody (Getting Started with Python)",
+    issuer: "University of Michigan",
+    date: "",
+    url: "https://www.coursera.org/account/accomplishments/records/V68LGKQJ64C5",
+  },
+  {
+    name: "Getting Started with Essay Writing",
+    issuer: "University of California, Irvine",
+    date: "",
+    url: "https://www.coursera.org/account/accomplishments/records/7HMAWGN6M6Y2",
+  },
+  {
+    name: "Front-End JavaScript Frameworks: AngularJS",
+    issuer: "The Hong Kong University of Science and Technology",
+    date: "",
+    url: "https://www.coursera.org/account/accomplishments/records/234ZHHJLUGDQ",
+  },
+  {
+    name: "Introduction to Google SEO",
+    issuer: "University of California, Davis",
+    date: "",
+    url: "https://www.coursera.org/account/accomplishments/records/85PQWLECR8FG",
+  },
+];
+
+const learningPaths = [
+  {
+    title: "BI Essentials for Finance Analysts (Power BI Edition)",
+    provider: "Corporate Finance Institute",
+    date: "",
+    certs: [
+      {
+        name: "Power BI Fundamentals",
+        url: "https://www.coursera.org/account/accomplishments/records/6DICMP7YGHQR",
+      },
+      {
+        name: "Intermediate DAX & Time Intelligence",
+        url: "https://www.coursera.org/account/accomplishments/records/FL5RUXRCHHP4",
+      },
+      {
+        name: "SQL Fundamentals for Data Analysts",
+        url: "https://www.coursera.org/account/accomplishments/records/W52ULI6YDO1N",
+      },
+      {
+        name: "Financial Statements in Power BI",
+        url: "https://www.coursera.org/account/accomplishments/records/XRWXL326QWPO",
+      },
+    ],
+  },
+  {
+    title: "IBM Data Science Professional Certificate",
+    provider: "IBM",
+    date: "",
+    certs: [
+      {
+        name: "What is Data Science?",
+        url: "https://www.coursera.org/account/accomplishments/records/TLR4A4YNPG6T",
+      },
+      {
+        name: "Tools for Data Science",
+        url: "https://www.coursera.org/account/accomplishments/records/9SZWI1QCF8U5",
+      },
+      {
+        name: "Data Science Methodology",
+        url: "https://www.coursera.org/account/accomplishments/records/6OCV5TJREEKH",
+      },
+      {
+        name: "Python for Data Science, AI & Development",
+        url: "https://www.coursera.org/account/accomplishments/records/1EKJEHPCO6LL",
+      },
+      {
+        name: "Python Project for Data Science",
+        url: "https://www.coursera.org/account/accomplishments/records/NJUDZUJTEAP6",
+      },
+      {
+        name: "Databases and SQL for Data Science with Python",
+        url: "https://www.coursera.org/account/accomplishments/records/XE1A4E1H8ML5",
+      },
+      {
+        name: "Data Analysis with Python",
+        url: "https://www.coursera.org/account/accomplishments/records/CW0YPNJO74EU",
+      },
+      {
+        name: "Data Visualization with Python",
+        url: "https://www.coursera.org/account/accomplishments/records/45BCRYMC82G6",
+      },
+      {
+        name: "Machine Learning with Python",
+        url: "https://www.coursera.org/account/accomplishments/records/BBZWJSNHLST8",
+      },
+      {
+        name: "Applied Data Science Capstone",
+        url: "https://www.coursera.org/account/accomplishments/records/6UKF3QGMMCKF",
+      },
+      {
+        name: "Generative AI: Elevate Your Data Science Career",
+        url: "https://www.coursera.org/account/accomplishments/records/WXW99M15R9O2",
+      },
+      {
+        name: "Data Scientist Career Guide and Interview Preparation",
+        url: "https://www.coursera.org/account/accomplishments/records/LHRGOQQJ2ZCM",
+      },
+    ],
+  },
+  {
+    title: "Google Digital Marketing & E-commerce Professional Certificate",
+    provider: "Google",
+    date: "",
+    certs: [
+      {
+        name: "Foundations of Digital Marketing and E-commerce",
+        url: "https://www.coursera.org/account/accomplishments/records/TAXQN4GIWKA1",
+      },
+      {
+        name: "Attract and Engage Customers with Digital Marketing",
+        url: "https://www.coursera.org/account/accomplishments/records/W4UPF2AWDREP",
+      },
+      {
+        name: "From Likes to Leads: Interact with Customers Online",
+        url: "https://www.coursera.org/account/accomplishments/records/1UKJX8SN6BP1",
+      },
+      {
+        name: "Think Outside the Inbox: Email Marketing",
+        url: "https://www.coursera.org/account/accomplishments/records/VMGEYUMYJD2N",
+      },
+      {
+        name: "Assess for Success: Marketing Analytics and Measurement",
+        url: "https://www.coursera.org/account/accomplishments/records/VGMKD74CUKNY",
+      },
+      {
+        name: "Make the Sale: Build, Launch, and Manage E-commerce Stores",
+        url: "https://www.coursera.org/account/accomplishments/records/L2JP2ZW3JKW9",
+      },
+      {
+        name: "Satisfaction Guaranteed: Develop Customer Loyalty Online",
+        url: "https://www.coursera.org/account/accomplishments/records/W4MPYATE52DQ",
+      },
+    ],
+  },
+  {
+    title: "Meta React Native Specialization",
+    provider: "Meta",
+    date: "",
+    certs: [
+      {
+        name: "Introduction to Mobile Development",
+        url: "https://www.coursera.org/account/accomplishments/records/6RRO992LZ9X6",
+      },
+      {
+        name: "Programming with JavaScript",
+        url: "https://www.coursera.org/account/accomplishments/records/EGRLW2LP98AC",
+      },
+      {
+        name: "Version Control",
+        url: "https://www.coursera.org/account/accomplishments/records/9FSP77AZZZYQ",
+      },
+      {
+        name: "React Basics",
+        url: "https://www.coursera.org/account/accomplishments/records/V044X6V397UY",
+      },
+      {
+        name: "React Native",
+        url: "https://www.coursera.org/account/accomplishments/records/UG6CMXB09ZOE",
+      },
+      {
+        name: "Working with Data",
+        url: "https://www.coursera.org/account/accomplishments/records/GCSHBZCOQ51C",
+      },
+      {
+        name: "Advanced React",
+        url: "https://www.coursera.org/account/accomplishments/records/IC3YFN4044N8",
+      },
+      {
+        name: "Mobile Development Capstone",
+        url: "https://www.coursera.org/account/accomplishments/records/J5K9POYGKROL",
+      },
+    ],
+  },
+];
+---
+
+<section id="certifications" class="bg-surface px-6 py-section-lg">
+  <div class="mx-auto flex max-w-[1280px] flex-col gap-10">
+    <div class="flex flex-col items-center gap-4 text-center">
+      <h2 class="text-heading-md text-ink">Certifications</h2>
+      <p class="max-w-[560px] text-body-md text-steel">
+        Courses and professional certifications completed across data
+        science, AI, development, and business.
+      </p>
+      <a
+        href="https://www.credly.com/users/asadinsights"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-full border border-ink px-5 py-2.5 text-button-md text-ink"
+      >
+        <Icon name="simple-icons:credly" class="size-4" />
+        View badges on Credly
+      </a>
+    </div>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        certifications.map((cert) => (
+          <div class="flex flex-col gap-3 rounded-3xl border border-hairline bg-canvas p-6">
+            <div class="flex flex-col gap-0.5">
+              <p class="text-body-sm-medium text-ink">{cert.name}</p>
+              <p class="text-caption text-stone">
+                {cert.issuer}
+                {cert.date ? ` · ${cert.date}` : ""}
+              </p>
+            </div>
+            {cert.url && (
+              <a
+                href={cert.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-auto inline-flex items-center gap-1.5 text-body-sm-medium text-ink underline underline-offset-4"
+              >
+                View credential
+                <Icon name="lucide:external-link" class="size-3.5" />
+              </a>
+            )}
+          </div>
+        ))
+      }
+    </div>
+
+    {
+      learningPaths.length > 0 && (
+        <div class="flex flex-col gap-6">
+          <h3 class="text-center text-body-sm-medium text-steel uppercase tracking-wide">
+            Career Certificates
+          </h3>
+          <div class="mx-auto flex w-full max-w-[820px] flex-col gap-3">
+            {learningPaths.map((path) => (
+              <details class="group overflow-hidden rounded-3xl border border-hairline bg-canvas open:shadow-sm">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-6 select-none [&::-webkit-details-marker]:hidden">
+                  <div class="flex flex-col gap-0.5">
+                    <p class="text-body-sm-medium text-ink">{path.title}</p>
+                    <p class="text-caption text-stone">
+                      {path.provider} · {path.certs.length} courses
+                      {path.date ? ` · ${path.date}` : ""}
+                    </p>
+                  </div>
+                  <Icon
+                    name="lucide:chevron-down"
+                    class="size-5 shrink-0 text-steel transition-transform duration-300 group-open:rotate-180"
+                  />
+                </summary>
+                <ul class="flex flex-col gap-1 border-t border-hairline px-4 pt-3 pb-4">
+                  {path.certs.map((item) => (
+                    <li>
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-body-sm text-charcoal transition-colors hover:bg-surface hover:text-ink"
+                      >
+                        <span>{item.name}</span>
+                        {item.url && (
+                          <Icon
+                            name="lucide:external-link"
+                            class="size-3.5 shrink-0 text-stone"
+                          />
+                        )}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            ))}
+          </div>
+        </div>
+      )
+    }
+  </div>
+</section>

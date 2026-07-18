@@ -1,0 +1,20 @@
+---
+import { projects } from "../data/projects";
+import ProjectCard from "./ProjectCard.astro";
+---
+
+<section id="projects" class="px-6 py-section-lg">
+  <div class="mx-auto flex max-w-[1280px] flex-col gap-10">
+    <div class="flex flex-col items-center gap-3 text-center">
+      <h2 class="text-heading-md text-ink">Projects</h2>
+      <p class="max-w-[560px] text-body-md text-steel">
+        A selection of shipped products — AI tools, automation systems, and
+        full-stack applications.
+      </p>
+    </div>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </div>
+</section>

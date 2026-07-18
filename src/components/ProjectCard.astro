@@ -1,0 +1,70 @@
+---
+import { Icon } from "astro-icon/components";
+import type { Project } from "../data/projects";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<article class="flex flex-col gap-4 rounded-3xl border border-hairline bg-canvas p-6">
+  <div class="flex items-start justify-between gap-3">
+    <h3 class="text-card-title text-ink">{project.title}</h3>
+    {
+      project.status === "live" ? (
+        <span class="shrink-0 rounded-full bg-brand-coral px-2.5 py-1 text-caption-bold text-on-dark">
+          Live
+        </span>
+      ) : (
+        <span class="shrink-0 rounded-full bg-brand-blue-200 px-2.5 py-1 text-caption-bold text-brand-blue-deep">
+          Source
+        </span>
+      )
+    }
+  </div>
+
+  <p class="text-body-sm text-steel">{project.description}</p>
+
+  {
+    project.note && (
+      <p class="text-caption text-stone italic">{project.note}</p>
+    )
+  }
+
+  <div class="flex flex-wrap gap-2">
+    {
+      project.tech.map((tech) => (
+        <span class="rounded-full border border-hairline px-2.5 py-1 text-caption text-charcoal">
+          {tech}
+        </span>
+      ))
+    }
+  </div>
+
+  <div class="mt-auto flex gap-3 pt-2">
+    {
+      project.status === "live" && (
+        <a
+          href={project.liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-button-md text-primary-foreground"
+        >
+          Live Demo
+          <Icon name="lucide:external-link" class="size-3.5" />
+        </a>
+      )
+    }
+    <a
+      href={project.repoUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-1.5 rounded-full border border-ink px-5 py-2.5 text-button-md text-ink"
+    >
+      View Source
+      <Icon name="simple-icons:github" class="size-3.5" />
+    </a>
+  </div>
+</article>

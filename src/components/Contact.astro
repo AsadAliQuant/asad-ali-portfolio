@@ -1,0 +1,54 @@
+---
+import { Icon } from "astro-icon/components";
+
+const links = [
+  {
+    label: "Email",
+    href: "mailto:asadamyn@gmail.com",
+    icon: "lucide:mail",
+    primary: true,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/asadaliquant/",
+    icon: "simple-icons:linkedin",
+    primary: false,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/AsadAliQuant",
+    icon: "simple-icons:github",
+    primary: false,
+  },
+];
+---
+
+<section id="contact" class="px-6 py-section-lg">
+  <div class="mx-auto flex max-w-[640px] flex-col items-center gap-6 text-center">
+    <h2 class="text-heading-md text-ink">Let's work together</h2>
+    <p class="max-w-[480px] text-body-md text-charcoal">
+      Have a project in mind or just want to say hi? Reach out through any of
+      the channels below.
+    </p>
+
+    <div class="mt-2 flex flex-wrap items-center justify-center gap-4">
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            target={link.primary ? undefined : "_blank"}
+            rel={link.primary ? undefined : "noopener noreferrer"}
+            class={
+              link.primary
+                ? "inline-flex items-center gap-2 rounded-full bg-primary px-6 py-[11px] text-button-md text-primary-foreground"
+                : "inline-flex items-center gap-2 rounded-full border border-ink px-6 py-[11px] text-button-md text-ink"
+            }
+          >
+            <Icon name={link.icon} class="size-4" />
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

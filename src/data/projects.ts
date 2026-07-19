@@ -146,8 +146,8 @@ export const projects: Project[] = [
     slug: "md-to-docx",
     title: "Free MD ⇄ DOCX Converter",
     description:
-      "A free, bidirectional Markdown <-> Word converter — Astro frontend on Cloudflare Pages, Flask + Pandoc backend on Cloud Run.",
-    tech: ["Astro", "Flask", "Pandoc", "Cloudflare Pages", "Cloud Run"],
+      "A free, bidirectional Markdown <-> Word converter — Astro frontend on Cloudflare Pages, Flask + Pandoc backend on Google Cloud Run.",
+    tech: ["Astro", "Flask", "Pandoc", "Cloudflare Pages", "Google Cloud Run"],
     status: "live",
     liveUrl: "https://free-md-to-docx.pages.dev",
     repoUrl: "https://github.com/AsadAliQuant/md-to-docx",

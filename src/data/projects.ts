@@ -144,12 +144,13 @@ export const projects: Project[] = [
   },
   {
     slug: "md-to-docx",
-    title: "md-to-docx",
+    title: "Free MD ⇄ DOCX Converter",
     description:
-      "A Dockerized Flask app that converts Markdown files into polished Word documents.",
-    tech: ["Python", "Flask", "Docker"],
-    status: "repo",
-    repoUrl: "#",
+      "A free, bidirectional Markdown <-> Word converter — Astro frontend on Cloudflare Pages, Flask + Pandoc backend on Cloud Run.",
+    tech: ["Astro", "Flask", "Pandoc", "Cloudflare Pages", "Cloud Run"],
+    status: "live",
+    liveUrl: "https://free-md-to-docx.pages.dev",
+    repoUrl: "https://github.com/AsadAliQuant/md-to-docx",
   },
   {
     slug: "md-to-pdf",

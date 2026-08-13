@@ -21,12 +21,13 @@ export const projects: Project[] = [
   },
   {
     slug: "gemini-to-word",
-    title: "GEMINI to WORD",
+    title: "Gemini → Word Equation Converter",
     description:
-      "A React + TypeScript tool that converts AI-generated content into Word documents, with full math support via KaTeX/MathML rendering.",
-    tech: ["React", "TypeScript", "KaTeX", "MathML"],
-    status: "repo",
-    repoUrl: "#",
+      "A 100% browser-based tool that turns AI-generated LaTeX math into Word-compatible equations — live preview, copyable OMML HTML, and .docx export, with no backend.",
+    tech: ["React", "TypeScript", "Vite", "KaTeX", "MathML/OMML", "Vercel"],
+    status: "live",
+    liveUrl: "https://gemini-to-word-equations.vercel.app",
+    repoUrl: "https://github.com/AsadAliQuant/gemini-to-word-equations",
   },
   {
     slug: "ibm-cv-portfolio-genai",
@@ -64,16 +65,6 @@ export const projects: Project[] = [
     tech: ["Python", "LLM APIs", "Automation", "Cron"],
     status: "repo",
     repoUrl: "#",
-  },
-  {
-    slug: "openmaic",
-    title: "OPENMAIC",
-    description:
-      "An AI application built on Next.js 16 / React 19 with LangGraph-orchestrated agents, configured for both Docker and Vercel deployment.",
-    tech: ["Next.js", "React 19", "LangGraph", "Docker"],
-    status: "repo",
-    repoUrl: "#",
-    note: "Extended from the open-source OpenMAIC project.",
   },
   {
     slug: "past-papers-downloader",
@@ -154,11 +145,22 @@ export const projects: Project[] = [
   },
   {
     slug: "md-to-pdf",
-    title: "md-to-pdf",
+    title: "Free MD ⇄ PDF Converter",
     description:
-      "A self-contained Flask app with an embedded web UI for converting Markdown files into PDF documents.",
-    tech: ["Python", "Flask"],
-    status: "repo",
+      "A free, bidirectional Markdown <-> PDF converter — Astro frontend on Cloudflare Pages, Flask + WeasyPrint backend on Google Cloud Run.",
+    tech: ["Astro", "Flask", "WeasyPrint", "Cloudflare Pages", "Google Cloud Run"],
+    status: "live",
+    liveUrl: "https://free-md-to-pdf.pages.dev",
+    repoUrl: "https://github.com/AsadAliQuant/md-to-pdf",
+  },
+  {
+    slug: "shopiflowai",
+    title: "ShopiflowAI",
+    description:
+      "An AI-powered SaaS for Shopify store owners — React frontend on Firebase Hosting, FastAPI backend.",
+    tech: ["React", "FastAPI", "Firebase"],
+    status: "live",
+    liveUrl: "https://shopiflowai.web.app/login",
     repoUrl: "#",
   },
 ];
